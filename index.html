@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI八字数据分析 - MVP演示</title>
+  <link rel="stylesheet" href="static/css/index.css">
+</head>
+
+<body>
+
+  <div class="card">
+    <h2>🔮 八字数据采集系统</h2>
+    <p>输入你的出生时间，获取五行能量报告</p>
+    <p class="instruction">以下需要输入的时间均为公历（阳历），时间为北京时间。请勿使用阴历</p>
+
+    <input type="text" id="name" placeholder="姓名（不愿透露可仅填姓或昵称）">
+    <input type="radio" class="gender" id="male" name="gender" value="male">
+    <label for="male">男</label>
+    <input type="radio" class="gender" id="female" name="gender" value="female">
+    <label for="female">女</label>
+
+    <input type="number" id="year" placeholder="年 (公历年，如：2001)">
+    <input type="number" id="month" placeholder="公历月">
+    <input type="number" id="day" placeholder="公历日">
+    <input type="number" id="hour" placeholder="时 (0-23)">
+    <input type="number" id="minute" placeholder="分">
+
+    <button onclick="analyze()">开始数据计算</button>
+    <button onclick="clearInputs()" id="clear-btn">清空</button>
+  </div>
+
+  <div id="result" class="card">
+    <h3>📊 分析报告</h3>
+    <p><strong>八字排盘：</strong> <span id="bazi-text"></span></p>
+    <p><strong>日主核心：</strong> <span id="day-master"></span></p>
+
+    <div style="text-align: center;">
+      <img id="chart-img" src="" alt="五行能量图">
+    </div>
+
+    <p style="color: #666; font-size: 12px; text-align: center; margin-top: 10px;">
+      *该报告由 Python 算法自动生成
+    </p>
+  </div>
+
+  <script src="static/js/index.js"></script>
+
+</body>
+
+</html>
