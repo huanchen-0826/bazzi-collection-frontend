@@ -11,24 +11,26 @@
 <body>
 
   <div class="card">
-    <h2>🔮 八字数据采集系统</h2>
-    <p>输入你的出生时间，获取五行能量报告</p>
-    <p class="instruction">以下需要输入的时间均为公历（阳历），时间为北京时间。请勿使用阴历</p>
+    <h2>🔮 八字数据输入系统</h2>
+    <p>请输入出生时间，生成五行能量报告图</p>
+    <p class="instruction">年月日均为公历（阳历），请勿使用阴历。</p>
+    <p class="instruction">时间为北京时间。</p>
+    <p class="instruction">出生时间不确定请联系我校准</p>
 
-    <input type="text" id="name" placeholder="姓名（不愿透露可仅填姓或昵称）">
+    <input type="text" id="name" placeholder="姓名（亦可仅填姓或昵称）">
     <input type="radio" class="gender" id="male" name="gender" value="male">
     <label for="male">男</label>
     <input type="radio" class="gender" id="female" name="gender" value="female">
     <label for="female">女</label>
 
-    <input type="number" id="year" placeholder="年 (公历年，如：2001)">
-    <input type="number" id="month" placeholder="公历月">
-    <input type="number" id="day" placeholder="公历日">
+    <input type="number" id="year" placeholder="公历年 (4位数，如：2001)">
+    <input type="number" id="month" placeholder="公历月（1位或2位数，如：2，08，11）">
+    <input type="number" id="day" placeholder="公历日（1位或2位数，如：3，05，30）">
     <input type="number" id="hour" placeholder="时 (0-23)">
-    <input type="number" id="minute" placeholder="分">
+    <input type="number" id="minute" placeholder="分（0~59）">
 
     <button onclick="analyze()">开始数据计算</button>
-    <button onclick="clearInputs()" id="clear-btn">清空</button>
+    <button onclick="location.reload()" id="clear-btn">清空</button>
   </div>
 
   <div id="result" class="card">

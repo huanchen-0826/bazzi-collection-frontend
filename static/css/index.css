@@ -19,6 +19,7 @@ button {
   margin: 5px 0;
   width: 100%;
   box-sizing: border-box;
+  font-size: 16px; /* 低于16px时iOS会自动放大，固定16px防止zoom */
 }
 
 .gender {

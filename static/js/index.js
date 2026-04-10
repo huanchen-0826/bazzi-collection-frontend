@@ -69,7 +69,7 @@ async function analyze() {
 }
 
 
-
+/*
 function clearInputs() {
   // Clear text and number
   const ids = ['name', 'year', 'month', 'day', 'hour', 'minute', 'gender'];
@@ -91,3 +91,4 @@ function clearInputs() {
 
   console.log("All inputs have been cleared");
 }
+  */
